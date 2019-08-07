@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: edu.coursera.parallel.StudentAnalyticsTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.254 sec <<< FAILURE! - in edu.coursera.parallel.StudentAnalyticsTest
+testMostCommonFirstNameOfInactiveStudents(edu.coursera.parallel.StudentAnalyticsTest)  Time elapsed: 1.277 sec  <<< ERROR!
+java.lang.Error: Unresolved compilation problems: 
+	The method toConcurrentMap(Function<? super T,? extends K>, Function<? super T,? extends U>) in the type Collectors is not applicable for the arguments (Student::getFirstName, Map<String, Integer>::get)
+	The type Student does not define getFirstName(T) that is applicable here
+	Cannot make a static reference to the non-static method get(Object) from the type Map<String,Integer>
+	at edu.coursera.parallel.StudentAnalytics.mostCommonFirstNameOfInactiveStudentsParallelStream(StudentAnalytics.java:114)
+	at edu.coursera.parallel.StudentAnalyticsTest.mostCommonFirstNameOfInactiveStudentsHelper(StudentAnalyticsTest.java:96)
+	at edu.coursera.parallel.StudentAnalyticsTest.testMostCommonFirstNameOfInactiveStudents(StudentAnalyticsTest.java:112)
+
+testMostCommonFirstNameOfInactiveStudentsPerf(edu.coursera.parallel.StudentAnalyticsTest)  Time elapsed: 2.291 sec  <<< ERROR!
+java.lang.Error: Unresolved compilation problems: 
+	The method toConcurrentMap(Function<? super T,? extends K>, Function<? super T,? extends U>) in the type Collectors is not applicable for the arguments (Student::getFirstName, Map<String, Integer>::get)
+	The type Student does not define getFirstName(T) that is applicable here
+	Cannot make a static reference to the non-static method get(Object) from the type Map<String,Integer>
+	at edu.coursera.parallel.StudentAnalytics.mostCommonFirstNameOfInactiveStudentsParallelStream(StudentAnalytics.java:114)
+	at edu.coursera.parallel.StudentAnalyticsTest.mostCommonFirstNameOfInactiveStudentsHelper(StudentAnalyticsTest.java:96)
+	at edu.coursera.parallel.StudentAnalyticsTest.testMostCommonFirstNameOfInactiveStudentsPerf(StudentAnalyticsTest.java:120)
+
